@@ -50,16 +50,17 @@ body{
 #h1-div {
 	position: absolute;
 	background-color: #e9e9e9;
-	width: 230px;
-	height: 50px;
-	margin: 15px 0px 0px 0px;
+	width: 350px;
+	height: 60px;
+	margin: 10px 0px 0px 0px;
 	opacity: 0.8; 
 }
 
 #h1-header{
 	margin: 5px 0px 0px 20px;
 	float: left;
-	font-family: Oleo Script;
+	font-family: Great Vibes;
+	font-size: 50px;
 	animation-duration: 2s;
 	animation-name: runningTittle;
 }
@@ -190,6 +191,12 @@ body{
 	border: 2px dashed;
 }
 
+#section1 h2{
+	margin : 10px 0px 0px 10px;
+	float: left;
+}
+
+
 #section1-header{
 	margin: 0px;
 	background: #CBB684;
@@ -197,14 +204,20 @@ body{
 	border-bottom : 2px dashed; 
 }
 
+#section1-header h2{
+	font-family: arizonia;
+	font-size: 30px;
+}
+
 #section1-article{
 	padding: 7px;
 	text-align: justify;
 }
 
-#section1 h2{
-	margin : 10px 0px 0px 10px;
-	float: left;
+#section1-article p{
+	padding: 7px;
+	text-align: justify;
+	font-family: Oleo script;
 }
 
 #section1 button{
@@ -238,9 +251,15 @@ body{
 	border-bottom : 2px dashed; 
 }
 
-#section2-article{
+#section2-header h2{
+	font-family: arizonia;
+	font-size: 30px;
+}
+
+#section2-article p{
 	padding: 7px;
 	text-align: justify;
+	font-family: Oleo script;
 }
 
 #section2 p{
