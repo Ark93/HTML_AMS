@@ -56,6 +56,19 @@ body{
 	opacity: 0.8; 
 }
 
+@media (max-width: 500px){
+
+	#h1-div {
+		position: absolute;
+		background-color: #e9e9e9;
+		width: 100%;
+		height: 60px;
+		margin: 10px 0px 0px 0px;
+		opacity: 0.8; 
+	}
+	
+}
+
 #h1-header{
 	margin: 5px 0px 0px 20px;
 	float: left;
@@ -63,6 +76,30 @@ body{
 	font-size: 50px;
 	animation-duration: 2s;
 	animation-name: runningTittle;
+}
+
+@media (max-width: 500px){
+
+	#h1-header{
+		margin: 10px 0px 0px 20px;
+		float: left;
+		font-family: Great Vibes;
+		font-size: 40px;
+		animation-duration: 2s;
+		animation-name: runningTittle;
+	}	
+}
+
+@media (max-width: 350px){
+
+	#h1-header{
+		margin: 15px 0px 0px 20px;
+		float: left;
+		font-family: Great Vibes;
+		font-size: 30px;
+		animation-duration: 2s;
+		animation-name: runningTittle;
+	}	
 }
 
 @keyframes runningTittle{
@@ -82,13 +119,25 @@ body{
 	float: right;
 	background-color: #e9e9e9;
 	width: 90px;
-	height: 40px;
-	margin: 25px 10px 0px 0px;
+	height: 60px;
+	margin: 15px 10px 0px 0px;
 	opacity: 0.8;
 }
 
+@media (max-width: 500px){
+
+	#a-div {
+		background-color: transparent;
+		float: right;
+		width: 90px;
+		height: 60;
+		margin: 15px 10px 0px 0px;
+		opacity: 0.8;
+	}	
+}
+
 #main-header a{
-	margin: 7px 20px 0 0;
+	margin: 17px 20px 0 0;
 	float: right;	
 	color: black;
 	font-family: Oleo Script;
@@ -96,6 +145,33 @@ body{
 	text-decoration:none;
 	}
 
+@media (max-width: 500px){
+
+	#main-header a{
+	margin: 17px 20px 0 0;
+	float: right;	
+	color: black;
+	font-family: Oleo Script;
+	font-size: 18px;
+	text-decoration:none;
+	}
+	
+}
+
+@media (max-width: 270px){
+
+	#main-header a{
+	display: none;	
+	margin: 17px 20px 0 0;
+	float: right;	
+	color: black;
+	font-family: Oleo Script;
+	font-size: 18px;
+	text-decoration:none;
+	}
+	
+}
+	
 #main-header a:hover{
 	color: blue;
 }
@@ -117,12 +193,13 @@ body{
 	position: fixed;
 }
 
-@media (max-width: 800px){
+@media (max-width: 850px){
 	#aside-div{
 		display:none;
 		width: 0%;
 	}
 }	
+
 #aside-section{
 	float: left;
 	border: 4px groove #7b672e;
@@ -139,8 +216,9 @@ body{
 #aside-section ul{
 	float: left;
 	position: relative;
-	padding: 5px;
+	padding: 5px 0px 0px 40px;
 	line-height: 53px;
+	list-style-image: url('images/rsz_1icono.png');
 }
 
 #aside-section li{
@@ -148,6 +226,7 @@ body{
 	line-height: 53px;
 	position: relative;
 	float: left;
+	
 }
 
 
@@ -164,9 +243,6 @@ body{
 #aside-section li ul li a:hover { background: #d8c392; }
 
 
-#aside-section li {
-	list-style:none;
-}
 /*main-sections*/
 #section-containers{
 	float: right;
@@ -174,8 +250,8 @@ body{
 	margin: 40px 10px 0px 0px;
 }
 
-@media (max-width: 800px){
-	#section-containers{
+@media (max-width: 850px){
+	#section-container{
 	position: absolute;
 	width:98%;			
 	margin:10px 0px 0px 0px;
@@ -234,6 +310,26 @@ body{
 	height:180px;
 	width: 180px;
 	margin: 10px 0px 0px 0px;
+}
+
+@media (max-width: 500px){
+	
+	#img-mario{
+	float:left;
+	height:130px;
+	width: 130px;
+	margin: 10px 0px 0px 0px;
+	}
+}
+
+@media (max-width: 300px){
+	
+	#img-mario{
+	float:left;
+	height:100px;
+	width: 100px;
+	margin: 10px 0px 0px 0px;
+}
 }
 
 #section2{
