@@ -9,43 +9,18 @@ body{
 	background-repeat: repeat;
 }
 
-@media (min-width : 500px) and (max-width: 1000px){
-	body{
-		background-color : green;
-	}
-}
 
 /*header*/
 #main-header{
 	background-image : url("images/caligrafia (3).jpg");
-	background-color : #A9F5A9;
 	color: #3B1204;
 	width:100%;
 	height:80px;
 	opacity : 0.9;
-	animation-duration: 1s;
-	animation-name: slideIn;
 	border-bottom : 2px outset;
 		
 }
 
-@keyframes slideIn{
-	from {
-		background-color: green;
-	}
-	
-	to{
-		background-color: #A9F5A9;
-	}
-}
-
-@media (min-width : 500px) and (max-width: 1000px){
-	main-header{
-		background-color : #81DAF5;
-		width:100%;
-		height:60px;	
-	}
-}
 
 #h1-div {
 	position: absolute;
@@ -186,7 +161,8 @@ body{
 
 /*aside*/
 #aside-div{
-	width: 19%;	
+	width: 17%;	
+	min-height: 400px;
 	float: left;
 	margin: 40px 0px 0px 10px;
 	font-family: pacifico;
@@ -208,9 +184,10 @@ body{
 	font-size: 100%;
 }
 
-#aside-nav{
+#main-nav{
 	float: left;
 	position: relative;
+	min-height: 400px;
 }
 
 #aside-section ul{
@@ -229,7 +206,7 @@ body{
 	
 }
 
-
+/*esta seccion la tome de internet xD */
 
 #aside-section li { float: left; position: relative; padding: 0; line-height: 40px; background: #d8c392 url(nav-bg.png) repeat-x 0 0; }
 #aside-section li:hover { background-position: 0 -40px; }
@@ -246,7 +223,7 @@ body{
 /*main-sections*/
 #section-container{
 	float: right;
-	width: 78%;
+	width: 80%;
 	margin: 40px 10px 0px 0px;
 }
 

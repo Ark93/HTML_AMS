@@ -19,38 +19,39 @@
 	}
 
 	function addMenuFunc(){
+
 		function constructMenu(){
-			var container = this.DOMapi.getContainer("main-nav"); //contenedor de nav
+			var container = this.DOMapi.getContainer("#aside-section"); //contenedor de nav
 			var newNav = document.createElement("nav");
 			var newList = document.createElement("ul");
-			newNav.appendChild("newList");
+			newNav.appendChild(newList);
+			newNav.id="main-nav";
 			container.appendChild(newNav);
 			function addList(item,index){
 				var index = index + 1;
-				newList.innerHTML += "<li>"(item.title + " " + index) + "</li>";
+				newList.innerHTML += "<li><a href='#'>"+(item.title + " " + item.id) + "</a></li>";
 			}
 			this.DOMapi.addItems(this.menu,addList);
 		}
 
 		function addMenuToDom(obj){
-			console.log(obj);
-			this.sections = obj.dataApi.sections;
+			this.sections = obj.data.sections;
 			this.menu = obj.data.menu;
 			constructMenu.call(this);
-		}
-		console.log(this);
+		}		
 		this.dataApi.getData(addMenuToDom.bind(this))
-	}
+	};
 
 	function addSectionsfunc(){
 		var _self = this;
 		var observer = setInterval(function(){
 			if(_self.sections){
+			debugger
 				clearInterval(observer);
-				var container = self.DOMapi().getSectionsContainer("#section-container");
-				function addItems(item,index){
-					var section
-				}	
+				var container = _self.DOMapi.getContainer("#section-container");
+
+				function addSection(item,index){
+					debugger;
 					var section = document.createElement('section');
 					section.className = 'section' ;
 					var header = document.createElement('header');
@@ -59,33 +60,39 @@
 					var article = document.createElement('article');
 					var img = document.createElement('img');
 					img.src = item.image;
-					section.appendChild(addSectionArticle());
 					var p = document.createElement('p');
 					p.textContent = item.article;
+					article.appendChild(img);
+					article.appendChild(p);
 					section.appendChild(header);
 					section.appendChild(article);
 					container.appendChild(section);
+					}
+
+				_self.DOMapi.addItems(_self.sections,addSection);
+				
 			}
 		},1)
-			
-		//sections.innerHTML = "Entry: 0 " + " <br><p>text</p>" 
-	
+				
 	};
 
 	function dataApiFunc(){
 		var URLs = {
-			get: "data/sections.json",
+			get: "app/data/sections.json",
 			post: "nope"
 		}
-		function getData(callback){
+		function getData(callBack){
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange= function(){
-				if(xmlhttp.readystate == 4 && xmlhttp.status==200){
-					callback(JSON.parse(xmlhttp.responseText));
-				}
+
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					console.log(xmlhttp.responseText);
+					callBack(JSON.parse(xmlhttp.responseText));
+				};
 			};
-			xmlhttp.open("GET", URLs.get, true);
+			xmlhttp.open('GET', URLs.get, true);
 			xmlhttp.send();
+			
 		}
 
 		function sendData(){
@@ -99,8 +106,7 @@
 
 	function domApiFunc(){
 		function getContainer(id){
-
-			return document.querySelectorAll(id);
+			return document.querySelector(id);
 		}
 
 		function addItems(items, callback){
