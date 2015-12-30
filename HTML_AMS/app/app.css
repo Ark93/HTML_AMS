@@ -244,7 +244,7 @@ body{
 
 
 /*main-sections*/
-#section-containers{
+#section-container{
 	float: right;
 	width: 78%;
 	margin: 40px 10px 0px 0px;
@@ -332,12 +332,40 @@ body{
 }
 }
 
-#section2{
+.section{
 	margin: 15px 10px 0px 0px;
 	position: relative;
 	background-color: #F5F6CE;
 	border: 2px dashed;
 	min-height: 250px;
+}
+
+.section-image{
+	margin: 10px;
+	float:left;
+	height: 150px;
+	width: 150px;
+}
+
+.section-header{
+	margin: 0px;
+	width: 100%;
+	background: #CBB684;
+	height: 50px;
+	border-bottom : 2px dashed; 
+}
+
+.section-header h2{
+	margin: 10px 0px 0px 10px;
+    float: left;
+	font-family: arizonia;
+	font-size: 30px;
+}
+
+.section p{
+	padding: 7px;
+	text-align: justify;
+	font-family: Oleo script;
 }
 
 #section2-header{

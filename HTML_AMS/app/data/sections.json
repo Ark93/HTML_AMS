@@ -1,0 +1,29 @@
+{
+	"data":{
+		"sections": [
+			{
+				"id":1,
+				"title": "Lorem",
+				"image": "url",
+				"article": "../images/pen-icon.jpg"
+			},
+			{
+				"id":2,
+				"title": "Lorem",
+				"image": "url",
+				"article": "../images/pen-icon.jpg"
+			},
+			{
+				"id":3,
+				"title": "Lorem",
+				"image": "../images/pen-icon.jpg",
+				"article": "lorem ipsum dolor sit amet"
+			}
+		],
+		"menu":[
+			{"id": 1, "title" : "menu blog part"},
+			{"id": 2, "title" : "menu blog part"},
+			{"id": 3, "title" : "menu blog part"},
+		]
+	}
+}
