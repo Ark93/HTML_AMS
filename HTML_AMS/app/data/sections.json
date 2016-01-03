@@ -4,19 +4,19 @@
 			{
 				"id":1,
 				"title": "Lorem",
-				"image": "../images/pen-icon.jpg",
-				"article": "../images/pen-icon.jpg"
+				"image": "app/images/pen-icon.jpg",
+				"article": "lorem ipsum dolor sit amet"
 			},
 			{
 				"id":2,
 				"title": "Lorem",
-				"image": "../images/pen-icon.jpg",
-				"article": "../images/pen-icon.jpg"
+				"image": "app/images/pen-icon.jpg",
+				"article": "lorem ipsum dolor sit amet"
 			},
 			{
 				"id":3,
 				"title": "Lorem",
-				"image": "../images/pen-icon.jpg",
+				"image": "app/images/pen-icon.jpg",
 				"article": "lorem ipsum dolor sit amet"
 			}
 		],

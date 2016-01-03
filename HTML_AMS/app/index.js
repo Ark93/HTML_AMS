@@ -5,6 +5,7 @@
 			dataApi : dataApiFunc(),
 			addMenu : addMenuFunc,
 			addSections: addSectionsfunc,
+			registerEvent: registerEventsFunc,
 			mainContainer: null,
 			sections : null,
 			menu: null,
@@ -16,6 +17,8 @@
 	function init(){
 		this.addMenu();
 		this.addSections();
+		this.registerEvent();
+		
 	}
 
 	function addMenuFunc(){
@@ -46,20 +49,25 @@
 		var _self = this;
 		var observer = setInterval(function(){
 			if(_self.sections){
-			debugger
 				clearInterval(observer);
 				var container = _self.DOMapi.getContainer("#section-container");
 
 				function addSection(item,index){
-					debugger;
 					var section = document.createElement('section');
 					section.className = 'section' ;
 					var header = document.createElement('header');
 					header.className = 'section-header';
-					header.textContent = item.title;
+					var h2 = document.createElement('h2');
+					h2.textContent =item.title + " " + item.id;
+					var button = document.createElement('button');
+					button.textContent="push"
+					header.appendChild(h2);
+					header.appendChild(button);
+
 					var article = document.createElement('article');
 					var img = document.createElement('img');
 					img.src = item.image;
+					img.className="section-image"
 					var p = document.createElement('p');
 					p.textContent = item.article;
 					article.appendChild(img);
@@ -75,6 +83,27 @@
 		},1)
 				
 	};
+
+	function registerEventsFunc () {
+		var menuMobileBtn = document.querySelector("#menu-mobile-btn"),
+		menuMobileContainer = document.querySelector("#menu-mobile-container"),
+		bodyTag = document.getElementsByTagName('body')[0],
+		target = null;
+		menuMobileBtn.addEventListener("touchstart", function (event) {
+			target = event.target.localName === 'span' ? event.target.parentElement : event.target
+			if (target.classList.length === 0) {
+				bodyTag.classList.add('no-scroll');
+				menuMobileContainer.classList.add('open');
+				target.classList.add('open');
+			}else {
+				bodyTag.classList.remove('no-scroll');
+				menuMobileContainer.classList.remove('open');
+				target.classList.remove('open');
+			};
+		}, false);
+	}
+
+
 
 	function dataApiFunc(){
 		var URLs = {
